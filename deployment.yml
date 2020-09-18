@@ -1,0 +1,7 @@
+jobs:
+# Give each job a unique name. The name will be displayed in the Fivetran dashboard once your jobs are imported.
+ - name: github
+   schedule: '*/10 * * * *' # The example will run every weekday at 7:30am.
+   steps:
+     - name: run salesforce models
+       command: dbt run --models github --no-version-check
